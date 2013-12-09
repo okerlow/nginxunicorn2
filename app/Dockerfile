@@ -7,6 +7,7 @@ RUN apt-get update
 RUN apt-get install -y ruby rubygems
 RUN gem install bundler
 RUN mkdir /opt/sinatra
+RUN apt-get install -y sudo
 
 ADD serve.rb /opt/sinatra/serve.rb
 ADD Gemfile /opt/sinatra/Gemfile
